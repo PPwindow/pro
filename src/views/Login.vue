@@ -3,8 +3,7 @@
     <div>
         <div class="div_style_big">
             <div class="div_style_1">
-                <router-link to="/Sign"><img src="../assets/pic/web_back.png" alt=""></router-link>
-                    
+                <router-link to="/Sign"><img src="../assets/pic/web_back.png" alt=""></router-link>     
             </div>
             <div class="div_style_2">
                 <span>密码登录</span>
