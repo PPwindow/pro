@@ -3,24 +3,23 @@
     <div>
         <div class="div_style_big">
             <div class="div_style_1">
-                <router-link to="/Sign"><img src="../assets/pic/web_back.png" alt=""></router-link>
-                    
+                <a href="">
+                    <img src="../assets/pic/web_back.png" alt="">
+                </a>
+                <a href="">
+                    <img src="../assets/user/user_setting_icon_black.png" alt="">
+                </a>
             </div>
             <div class="div_style_2">
-                <span>密码登录</span>
-                <span>使用你在美食随手拍设置的密码登录</span> 
+                <span>验证码登录</span>
+                <span>接收手机验证码，快速注册或登录</span> 
             </div>  
             <div class="div_style_3">
-                <input style="border:none;outline:medium;" placeholder="手机号码/用户名" v-model="uname" :attr="{autofocus:true}">
-                <input style="border:none;outline:medium;" class="input_style" placeholder="密码" v-model="upwd" :type="type">
-                <a href="javascript:;" @click="change">
-                    <img :src="imgs[i]" alt="">
-                </a>
-                <button @click="fun">登录</button>
+                <input style="border:none;outline:medium;" placeholder="手机号码" v-model="uname" :attr="{autofocus:true}">
+                <button @click="fun">确认</button>
             </div>
             <div class="div_style_4">
-                <router-link to="/Sign">手机验证码登录</router-link>
-                <a href="">找回密码</a>
+                <router-link to="/Login">用户名密码登录</router-link>
             </div>
             <div class="div_style_5">
                 <span>其他登录方式</span>
@@ -47,43 +46,39 @@ export default {
         return{
            uname:"",
            upwd:"",
-           type:"password",
-           imgs:[
-               require("../assets/pic/password_hide_icon.png"),
-               require("../assets/pic/password_show_icon.png"),
-           ],
-           i:0,
         }
     },
     methods: {
-        //axios请求
+        //axios请求 
         fun(){
-            var uname=this.uname
-            var upwd=this.upwd
-            var url="login"
-            var obj={uname:uname,upwd:upwd}
-            this.axios.get(
-                url,
-                {params:obj}
-                ).then(res=>{
-                    if(res.data.code<0){
-                        this.$messagebox("消息","用户名密码有误")
-                    }else{
-                        this.$router.push("/User")
-                    }
-                })
-        },
-        //密码框变化及图片
-        change(){
-            if(this.type=="password"){
-               this.type="text";
-               this.i=1
-            }else{
-                this.type="password";
-                this.i=0
-            }
-
+            console.log(111)
         }
+        //     var uname=this.uname
+        //     var upwd=this.upwd
+        //     var url="login"
+        //     var obj={uname:uname,upwd:upwd}
+        //     this.axios.get(
+        //         url,
+        //         {params:obj}
+        //         ).then(res=>{
+        //             if(res.data.code<0){
+        //                 this.$messagebox("消息","用户名密码有误")
+        //             }else{
+        //                 this.$router.push("/User")
+        //             }
+        //         })
+        // },
+        //密码框变化及图片
+    //     change(){
+    //         if(this.type=="password"){
+    //            this.type="text";
+    //            this.i=1
+    //         }else{
+    //             this.type="password";
+    //             this.i=0
+    //         }
+
+    //     }
     },
     watch:{
         
@@ -103,9 +98,18 @@ export default {
           margin-top:10px;
           margin-bottom: 10px;
       }
-      .div_style_1 a img{
+      .div_style_1 a:first-child img{
           width:30px;
           height:30px;
+      }
+      .div_style_1 a:last-child{
+          float: right;
+      }
+      .div_style_1 a:last-child img{
+          width:25px;
+          height:25px;
+          margin-right: 5px;
+          margin-top: 5px;
       }
       /* 第二行文字 */
       .div_style_2{
@@ -126,7 +130,7 @@ export default {
       /* 登录框 */
       .div_style_3{
           width:355px;
-          height:180px;
+          height:120px;
           color: #999;
           position: relative;
       }
@@ -139,24 +143,6 @@ export default {
           border-bottom:1px solid #999 ;
           margin-bottom: 5px;
       }
-      .input_style{
-          display: block;
-          width: 355px;
-          height: 50px;
-          font-size: 20px;
-          border:#fff;
-          border-bottom:1px solid #999 ;
-          margin-bottom: 5px;
-      }
-      .div_style_3 a{
-          position: absolute;
-          right: 10px;
-          top:73px;
-      }
-      .div_style_3 a img{
-          width:20px;
-          height:20px;
-      }
       .div_style_3 button{
           display: block;
           width: 355px;
@@ -168,20 +154,14 @@ export default {
           border-radius: 5px;
           margin-top: 20px;
       }
-      /* 验证与找回 */
+      /* 转到用户名密码登录页 */
       .div_style_4{
           width: 355px;
-          height: 200px;
+          height: 250px;
       }
       .div_style_4 a:first-child{
           display: flex;
           float: left;
-          color: rgb(236, 148, 148);
-          text-decoration: none;
-      }
-      .div_style_4 a:last-child{
-          display: flex;
-          float: right;
           color: rgb(236, 148, 148);
           text-decoration: none;
       }
