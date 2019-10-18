@@ -12,16 +12,16 @@
     <mt-tab-container v-model="active"> 
       <mt-tab-container-item id="tab1">
         <div class="ttongzhiA">
-          <router-link to="/tongzhi" ><div class="ttongzhia">
+          <router-link to="/txiaoxi" ><div class="ttongzhia">
             系统消息
             </div></router-link>
-          <router-link to="/tongzhi"><div class="ttongzhia">
+          <router-link to="/txiaoxi"><div class="ttongzhia">
             @我的
           </div></router-link>
-          <router-link to="/tongzhi"><div class="ttongzhia">
+          <router-link to="/txiaoxi"><div class="ttongzhia">
             评论通知
           </div></router-link>
-          <router-link to="/tongzhi"><div class="ttongzhia">
+          <router-link to="/txiaoxi"><div class="ttongzhia">
             更多通知
           </div></router-link>
           <router-link to="/tongzhi"><div class="ttongzhia">
