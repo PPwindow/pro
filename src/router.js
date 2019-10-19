@@ -19,7 +19,7 @@ export default new Router({
     {path:'/txiaoxi',component:txiaoxi},
     {path:'/tongzhi',component:tongzhi},
     {path:'/Login',component:Login},
-
+    
     // 广场组件访问路径
     {path:'/HomeGc',component:HomeGc},
   ]
