@@ -5,7 +5,7 @@
             <mt-tab-item id="tab2"><span style="font-size:18px;">广场</span></mt-tab-item>
             <mt-tab-item id="tab3"><span style="font-size:18px;">投票</span></mt-tab-item>
             <mt-tab-item id="tab4"><span style="font-size:18px;">最新</span></mt-tab-item>
-            <mt-tab-item id="5"><span style="font-size:18px;">话题</span></mt-tab-item>
+            <mt-tab-item id="tab5"><span style="font-size:18px;">话题</span></mt-tab-item>
         </mt-navbar>
         <!-- tab-container -->
         <mt-tab-container v-model="selected">
@@ -33,17 +33,24 @@
             </mt-tab-container-item>
             <mt-tab-container-item id="tab5">
                 <h3>话题</h3>
+                <ht></ht>
             </mt-tab-container-item>
         </mt-tab-container>
     </div>
 </template>
 <script>
+//1.引入子组件
+import ht from './common/ht.vue'
 export default {
     data(){
         return {
             selected:"tab2",
         }
-    }
+    },
+    // 2.注册子组件
+    components:{
+        'ht':ht,
+    },
 }
 </script>
 <style scoped>

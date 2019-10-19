@@ -73,7 +73,8 @@ export default {
                 {isSelect:false},
                 {isSelect:false},
                 {isSelect:false},
-            ]
+            ],
+            login:false
         }
     },
     methods:{
