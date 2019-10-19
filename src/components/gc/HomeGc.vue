@@ -23,7 +23,7 @@
                 <h3>热门</h3>
             </mt-tab-container-item>
             <mt-tab-container-item id="tab2">
-                <h3>广场</h3>
+                <gc></gc>
             </mt-tab-container-item>
             <mt-tab-container-item id="tab3">
                 <h3>投票</h3>
@@ -32,7 +32,6 @@
                 <h3>最新</h3>
             </mt-tab-container-item>
             <mt-tab-container-item id="tab5">
-                <h3>话题</h3>
                 <ht></ht>
             </mt-tab-container-item>
         </mt-tab-container>
@@ -40,6 +39,7 @@
 </template>
 <script>
 //1.引入子组件
+import gc from './common/gc.vue'
 import ht from './common/ht.vue'
 export default {
     data(){
@@ -49,6 +49,7 @@ export default {
     },
     // 2.注册子组件
     components:{
+        'gc':gc,
         'ht':ht,
     },
 }
@@ -76,8 +77,11 @@ export default {
         margin-right: 10px;
     }
     .mint-tab-container-item{
-        margin-top: 50px;
-        margin-left: 20px;
-        margin-right: 20px;
+        /* margin: 0 auto; */
+        margin-top: 42px;
+        /* margin-left: 20px; */
+        /* margin-right: 20px; */
+        box-sizing: border-box;
     }
+    
 </style>
