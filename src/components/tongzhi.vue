@@ -13,19 +13,19 @@
       <mt-tab-container-item id="tab1">
         <div class="ttongzhiA">
           <router-link to="/txiaoxi" ><div class="ttongzhia">
-            系统消息
+            <div>系统消息</div> <div class="ttongzhiaimg"><img src="../assets/txiaoxi/tjingru.png"></div>
             </div></router-link>
           <router-link to="/txiaoxi"><div class="ttongzhia">
-            @我的
+           <div>@我的</div> <div class="ttongzhiaimg"><img src="../assets/txiaoxi/tjingru.png"></div>
           </div></router-link>
           <router-link to="/txiaoxi"><div class="ttongzhia">
-            评论通知
+           <div>评论通知</div> <div class="ttongzhiaimg"><img src="../assets/txiaoxi/tjingru.png"></div>
           </div></router-link>
           <router-link to="/txiaoxi"><div class="ttongzhia">
-            更多通知
+           <div>更多通知</div> <div class="ttongzhiaimg"><img src="../assets/txiaoxi/tjingru.png"></div>
           </div></router-link>
           <router-link to="/tongzhi"><div class="ttongzhia">
-            阅读推荐
+           <div>阅读推荐</div> <div class="ttongzhiaimg"><img src="../assets/txiaoxi/tjingru.png"></div>
           </div></router-link>
           <div class="ttongzhiimg"><img src=""></div>
           <div class="ttongzhitxt">
@@ -78,6 +78,18 @@ export default {
   line-height: 50px;
   color: #000;
   border-bottom:1px solid #d4d4d4;
+  display: flex;
+  justify-content: space-between;/*左右对齐*/
+  align-items: center;/*垂直居中*/
+}
+.ttongzhiaimg{
+  width: 20px;
+  height: 20px;
+}
+.ttongzhiaimg>img{
+  max-width: 100%;
+  max-height: 100%;
+  vertical-align: top;
 }
 .ttongzhiB{
   margin-top: 50px;
