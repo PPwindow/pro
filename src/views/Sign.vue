@@ -3,9 +3,7 @@
     <div>
         <div class="div_style_big">
             <div class="div_style_1">
-                <a href="">
-                    <img src="../assets/pic/web_back.png" alt="">
-                </a>
+                <router-link to="/Home"><img src="../assets/pic/web_back.png" alt=""></router-link>
                 <a href="">
                     <img src="../assets/user/user_setting_icon_black.png" alt="">
                 </a>

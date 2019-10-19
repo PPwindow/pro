@@ -8,11 +8,13 @@ import Agreement from './views/Agreement.vue'
 import Sign from './views/Sign.vue'
 // 广场组件引入
 import HomeGc from './components/gc/HomeGc.vue'
+import Home from './views/Home.vue'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
+    {path:'/Home',component:Home},
     {path:'/Sign',component:Sign},
     {path:'/Agreement',component:Agreement},
     {path:'/User',component:User},
