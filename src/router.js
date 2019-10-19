@@ -9,11 +9,14 @@ import Sign from './views/Sign.vue'
 // 广场组件引入
 import HomeGc from './components/gc/HomeGc.vue'
 import Home from './views/Home.vue'
+//引入注册组件
+import SignIn from './views/SignIn.vue'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
+    {path:'/SignIn',component:SignIn},
     {path:'/Home',component:Home},
     {path:'/Sign',component:Sign},
     {path:'/Agreement',component:Agreement},
