@@ -8,7 +8,10 @@ import Agreement from './views/Agreement.vue'
 import Sign from './views/Sign.vue'
 // 广场组件引入
 import HomeGc from './components/gc/HomeGc.vue'
+<<<<<<< HEAD
 import Home from './views/Home.vue'
+=======
+>>>>>>> pp
 
 Vue.use(Router)
 
