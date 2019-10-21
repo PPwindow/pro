@@ -62,8 +62,8 @@ export default {
 </script>
 <style scoped>
     .mint-cell{
-        margin-left: -10px;
+        margin-left: 10px;
         margin-right:20px;
-        border-bottom: 1px solid #eee;
+        /* border-bottom: 1px solid #eee; */
     }
 </style>
