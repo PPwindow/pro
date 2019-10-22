@@ -12,11 +12,13 @@ import HomeGc from './components/gc/HomeGc.vue'
 import Home from './views/Home.vue'
 //引入注册组件
 import SignIn from './views/SignIn.vue'
-
+//主页
+import Index from './components/zy/index.vue'
 Vue.use(Router)
 
 export default new Router({
   routes: [
+    {path:'/Index',component:Index},
     {path:'/SignIn',component:SignIn},
     {path:'/Home',component:Home},
     {path:'/Sign',component:Sign},

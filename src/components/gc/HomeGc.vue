@@ -1,11 +1,21 @@
 <template>
     <div>
         <mt-navbar v-model="selected" fixed>
-            <mt-tab-item id="tab1"><span style="font-size:18px;">热门</span></mt-tab-item>
-            <mt-tab-item id="tab2"><span style="font-size:18px;">广场</span></mt-tab-item>
-            <mt-tab-item id="tab3"><span style="font-size:18px;">投票</span></mt-tab-item>
-            <mt-tab-item id="tab4"><span style="font-size:18px;">最新</span></mt-tab-item>
-            <mt-tab-item id="tab5"><span style="font-size:18px;">话题</span></mt-tab-item>
+            <mt-tab-item id="tab1">
+                <span style="font-size:18px;">热门</span>
+            </mt-tab-item>
+            <mt-tab-item id="tab2">
+                <span style="font-size:18px;">广场</span>
+            </mt-tab-item>
+            <mt-tab-item id="tab3">
+                <span style="font-size:18px;">投票</span>
+            </mt-tab-item>
+            <mt-tab-item id="tab4">
+                <span style="font-size:18px;">最新</span>
+            </mt-tab-item>
+            <mt-tab-item id="tab5">
+                <span style="font-size:18px;">话题</span>
+            </mt-tab-item>
         </mt-navbar>
         <!-- tab-container -->
         <mt-tab-container v-model="selected">

@@ -1,8 +1,8 @@
 <template>
   <div id="signin">
       <div class="topimgs">
-        <img :src="require('../../assets/signin/back_icon_mini_gray.png')">
-        <img :src="require('../../assets/signin/user_setting_icon_black.png')">
+        <img :src="require('../assets/signin/back_icon_mini_gray.png')">
+        <img :src="require('../assets/signin/user_setting_icon_black.png')">
       </div>
       <div class="title">
         <h2>验证码登录</h2>

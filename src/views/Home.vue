@@ -2,7 +2,9 @@
     <div>
          <mt-tab-container v-model="active"> 
             <mt-tab-container-item id="menu">
-                <div>第一个页面</div>
+                <div>
+                    <index></index>
+                </div>
             </mt-tab-container-item>
             <mt-tab-container-item id="square">
                  <div>
@@ -69,6 +71,7 @@ import TabBar from "./TabBar.vue"
 import tongzhi from "../components/tongzhi"
 import gc from "../components/gc/HomeGc"
 import login from "./Login.vue"
+import index from "../components/zy/index.vue"
 export default {
     data(){
         return{
@@ -103,7 +106,8 @@ export default {
           "tabbar":TabBar,
           "tongzhi":tongzhi,
           "gc":gc,
-          "login":login
+          "login":login,
+          "index":index
       }
 }
 </script>
