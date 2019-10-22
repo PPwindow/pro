@@ -170,7 +170,7 @@ export default {
       /* 验证与找回 */
       .div_style_4{
           width: 355px;
-          height: 200px;
+          height: 180px;
       }
       .div_style_4 a:first-child{
           display: flex;
