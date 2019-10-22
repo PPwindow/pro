@@ -5,7 +5,10 @@
                 <div>第一个页面</div>
             </mt-tab-container-item>
             <mt-tab-container-item id="square">
-                 <div>第二个页面</div>
+                 <div>
+                     <!-- 组件hongGc广场 -->
+                     <gc></gc>
+                 </div>
             </mt-tab-container-item>
             <mt-tab-container-item id="add">
                  <div>第三个页面</div>
@@ -14,7 +17,9 @@
                 <tongzhi></tongzhi>
             </mt-tab-container-item>
             <mt-tab-container-item id="me">
-                 <div>第四个页面</div>
+                 <div>
+                     <login></login>
+                 </div>
             </mt-tab-container-item>
         </mt-tab-container>
         <!-- 底部导航条 start -->
@@ -30,7 +35,8 @@
             <mt-tab-item id="square" @click.native="changeState(1)">
                 <tabbar :selectedImage="require('../img/activity_main_tab02_red.png')"
                     :normalImage="require('../img/activity_main_tab02_gray.png')"
-                    :focused="currentIndex[1].isSelect"></tabbar>
+                    :focused="currentIndex[1].isSelect">
+                    </tabbar>
                 广场
             </mt-tab-item>
              <!-- 第三个按钮 + -->
@@ -61,6 +67,8 @@
 <script>
 import TabBar from "./TabBar.vue"
 import tongzhi from "../components/tongzhi"
+import gc from "../components/gc/HomeGc"
+import login from "./Login.vue"
 export default {
     data(){
         return{
@@ -93,7 +101,9 @@ export default {
 },
       components:{
           "tabbar":TabBar,
-          "tongzhi":tongzhi
+          "tongzhi":tongzhi,
+          "gc":gc,
+          "login":login
       }
 }
 </script>

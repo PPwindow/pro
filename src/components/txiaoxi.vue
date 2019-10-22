@@ -111,19 +111,16 @@ a{text-decoration:none}
   
 }
 .txiaoxihdfanhui{
-<<<<<<< HEAD
   width: 30px;
 }
 .txiaoxihdfanhui>img{
   max-width: 100%;
-=======
   width: 20px;
   height: 20px;
 }
 .txiaoxihdfanhui>img{
   max-width: 100%;
   max-height: 100%;
->>>>>>> dev
 }
 .txiaoxibtAul>li{
   margin-bottom: 20px;
