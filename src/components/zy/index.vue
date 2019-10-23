@@ -19,6 +19,7 @@
         </mt-navbar>
         <mt-tab-container v-model="selected">
             <mt-tab-container-item id="tab1">
+                <div style="height:55px"></div>
                 <h3>投票</h3>
                 <h3>投票</h3>
                 <h3>投票</h3>
@@ -28,6 +29,7 @@
                 <h3>投票</h3>
             </mt-tab-container-item>
             <mt-tab-container-item id="tab2">
+                <div style="height:55px"></div>
                 <lunbo></lunbo>
             </mt-tab-container-item>
             <mt-tab-container-item id="tab3">
@@ -62,5 +64,27 @@ export default {
 } 
 </script>
 <style scoped>
-
+   .mint-navbar {
+        background-color: #fafafa;
+        padding:0 20px;
+    }
+    /* 1：修改navbar中默认和选中的文字 */
+    .mint-tab-item-label{
+        color: #333;
+        font-size: 18px;
+        /* line-height: 1; */
+    }
+    .mint-navbar .mint-tab-item.is-selected{
+        color:#ff6766;
+        border-bottom: 2px solid #ff6766;
+    }
+    .mint-navbar .mint-tab-item{
+        padding: 12px 0;
+        margin: 0;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .mint-tab-container-item{
+        box-sizing: border-box;
+    }
 </style>
