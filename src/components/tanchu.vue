@@ -30,6 +30,11 @@ export default {
 }
 </script>
 <style scoped>
+.tanchu{
+  position:relative;
+  top:0;
+  z-index: 9999;
+}
 .fab{
   width: 300px;
   height: 50px;

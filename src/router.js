@@ -21,6 +21,7 @@ export default new Router({
     {path:'/Index',component:Index},
     {path:'/SignIn',component:SignIn},
     {path:'/Home',component:Home},
+    {path:'/',component:Home},
     {path:'/Sign',component:Sign},
     {path:'/Agreement',component:Agreement},
     {path:'/User',component:User},
