@@ -4,6 +4,7 @@ import Login from './views/Login.vue'
 import tongzhi from './components/tongzhi.vue'
 import txiaoxi from './components/txiaoxi.vue'
 import tanchu from './components/tanchu.vue'
+import caipu from './components/caipu.vue'
 import User from './views/User.vue'
 import Agreement from './views/Agreement.vue'
 import Sign from './views/Sign.vue'
@@ -18,6 +19,7 @@ Vue.use(Router)
 
 export default new Router({
   routes: [
+    {path:'/caipu',component:caipu},
     {path:'/Index',component:Index},
     {path:'/SignIn',component:SignIn},
     {path:'/Home',component:Home},
