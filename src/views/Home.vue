@@ -41,7 +41,8 @@
             </mt-tab-container-item>
             <mt-tab-container-item id="me">
                  <div>
-                     <login></login>
+                    <login v-if="isLogin" v-on:pass="passout"></login>
+                    <user v-else></user>
                  </div>
             </mt-tab-container-item>
         </mt-tab-container>
@@ -97,6 +98,7 @@ import tongzhi from "../components/tongzhi"
 import gc from "../components/gc/HomeGc"
 import login from "./Login.vue"
 import index from "../components/zy/index.vue"
+import User from "./User.vue"
 
 export default {
     data(){
@@ -112,7 +114,8 @@ export default {
                 {isSelect:false},
                 {isSelect:false},
             ],
-            login:false
+            login:false,
+            isLogin:true,
         }
     },
     methods:{
@@ -127,6 +130,12 @@ export default {
                   this.currentIndex[i].isSelect=false;
             }
         }
+
+    },
+    passout(data){
+       if(data>0){
+           this.isLogin=false;
+       }
     },
     tcshijian(){
         this.tc=true;
@@ -140,7 +149,8 @@ export default {
           "tongzhi":tongzhi,
           "gc":gc,
           "login":login,
-          "index":index
+          "index":index,
+          "user":User
       }
 }
 </script>

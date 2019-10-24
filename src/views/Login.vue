@@ -52,8 +52,10 @@ export default {
                require("../assets/pic/password_show_icon.png"),
            ],
            i:0,
+           code:""
         }
     },
+    props:[],
     methods: {
         //axios请求
         fun(){
@@ -68,7 +70,9 @@ export default {
                     if(res.data.code<0){
                         this.$messagebox("消息","用户名密码有误")
                     }else{
-                        this.$router.push("/User")
+                        this.code=res.data.code
+                        console.log(this.code);
+                        this.$emit("pass",this.code)
                     }
                 })
         },

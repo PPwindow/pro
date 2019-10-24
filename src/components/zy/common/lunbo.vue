@@ -29,7 +29,21 @@
                         </div>
                     </div>
             </div>
-            
+            <div class="div_style_2" v-for="(item,i) of img_all" :key="i">
+                    <span>{{item.title}}</span>
+                    <div>
+                        <img :src="item.src" alt="">
+                        <img :src="item.src" alt="">
+                        <img :src="item.src" alt="">
+                        <div>
+                            <a href="">{{item.uname}}</a>
+                            <span>{{item.num}}</span>
+                            <a href="javascript:;">
+                                <img src=""   alt="">
+                            </a>
+                        </div>
+                    </div>
+            </div>
         </div>
     </div>
 </template>
@@ -51,9 +65,9 @@ export default {
             require("../../../assets/index/fav_selected.png")
             ],
             img_all:[
-                {title:"自制炸鸡，不输炸鸡店！真的太香了",src:"../../../assets/index/index01.png",uname:"菜单",num:0,},
-                {n:2},
-                {n:3}
+                {title:"自制炸鸡，不输炸鸡店！真的太香了",src:require("../../../assets/index/index01.png"),uname:"菜单",num:0,},
+                {title:"自制炸鸡，不输炸鸡店！真的太香了",src:require("../../../assets/index/index01.png"),uname:"菜单",num:2,},
+                {title:"自制炸鸡，不输炸鸡店！真的太香了",src:require("../../../assets/index/index01.png"),uname:"菜单",num:3,}
             ],
             changecolor:2,
             n:0
@@ -130,7 +144,7 @@ export default {
    }
    .div_style_2{
        width: 22.1875rem;
-       height: 15.625rem;
+       height: 10.55rem;
        margin-top: .3125rem;
    }
    .div_style_2 a{
@@ -138,7 +152,7 @@ export default {
        color: #666;
    }
    .div_style_2 div img{
-       width: 7.0rem;
+       width: 7.14rem;
        height: 7.5rem;
        border-radius: .3125rem;
        padding: 0px 2px;
