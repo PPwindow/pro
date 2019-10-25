@@ -2,10 +2,14 @@
 <div class="home">
     <div class="tanchutc" v-show="tc">
         <div class="tanchulie">
-            <div class="tanchulied">
+             <div class="tanchulied">
+                 <router-link to="/caipu">
                 <div class="tanchuimg"><img src="../assets/tanchu/shouji.png"></div>
                 <div class="tanchutxt">上传</div>
+                </router-link>
             </div>
+
+
             <div class="tanchulied">
                 <div class="tanchuimg"><img src="../assets/tanchu/xiangce.png"></div>
                <div class="tanchutxt">图片</div>
@@ -184,7 +188,7 @@ export default {
     vertical-align:middle;
 }
 .tanchutc{
-    position: absolute;
+    position: fixed;
     top: 0;
     width: 100%;
     height: 100%;

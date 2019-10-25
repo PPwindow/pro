@@ -1,7 +1,7 @@
 <template>
 <div class="caipu">
   <div class="caipuhd">
-    <div class="caipuhdfan">返回</div>
+    <div class="caipuhdfan" @click="back">返回</div>
     <div class="caipuhdbian">编辑菜谱</div>
     <div class="caipuhdcun">存草稿</div>
   </div>
@@ -30,6 +30,11 @@ export default {
       
     }
   },
+  methods:{
+     back(){
+       this.$router.go(-1);
+     }
+  }
 }
 </script>
 <style scoped>
