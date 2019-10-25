@@ -66,6 +66,7 @@ export default {
                 url,
                 {params:obj}
                 ).then(res=>{
+                    console.log(res)
                     if(res.data.code<0){
                         this.$messagebox("消息","用户名密码有误")
                     }else{
