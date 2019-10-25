@@ -4,6 +4,7 @@ import Login from './views/Login.vue'
 import tongzhi from './components/tongzhi.vue'
 import txiaoxi from './components/txiaoxi.vue'
 import tanchu from './components/tanchu.vue'
+import shangchuantu from './components/shangchuantu.vue'
 import caipu from './components/caipu.vue'
 import User from './views/User.vue'
 import userSet from './components/userSet.vue'
@@ -22,6 +23,10 @@ Vue.use(Router)
 export default new Router({
   routes: [
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    {path:'/shangchuantu',component:shangchuantu},
+>>>>>>> dev
     {path:'/caipu',component:caipu},
 =======
     {path:'/Publishpictures',component:Publishpictures},
