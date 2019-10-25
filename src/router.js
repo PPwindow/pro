@@ -22,15 +22,9 @@ Vue.use(Router)
 
 export default new Router({
   routes: [
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     {path:'/shangchuantu',component:shangchuantu},
->>>>>>> dev
     {path:'/caipu',component:caipu},
-=======
     {path:'/Publishpictures',component:Publishpictures},
->>>>>>> ff5e5590ee4662653191aa5d69e35e90cb0da776
     {path:'/Index',component:Index},
     {path:'/SignIn',component:SignIn},
     {path:'/Home',component:Home},
