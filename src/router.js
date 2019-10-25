@@ -15,10 +15,12 @@ import Home from './views/Home.vue'
 import SignIn from './views/SignIn.vue'
 //主页
 import Index from './components/zy/index.vue'
+import Publishpictures from './components/Publishpictures.vue'
 Vue.use(Router)
 
 export default new Router({
   routes: [
+    {path:'/Publishpictures',component:Publishpictures},
     {path:'/Index',component:Index},
     {path:'/SignIn',component:SignIn},
     {path:'/Home',component:Home},
