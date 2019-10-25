@@ -22,10 +22,7 @@ Vue.use(Router)
 
 export default new Router({
   routes: [
-<<<<<<< HEAD
     {path:'/shangchuantu',component:shangchuantu},
-=======
->>>>>>> pp
     {path:'/caipu',component:caipu},
     {path:'/Publishpictures',component:Publishpictures},
     {path:'/Index',component:Index},
