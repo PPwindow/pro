@@ -12,11 +12,15 @@
                 <span>验证码登录</span>
                 <span>接收手机验证码，快速注册或登录</span> 
             </div>  
-            <div class="div_style_3">
-                <input style="border:none;outline:medium;" placeholder="手机号码" v-model="uname" :attr="{autofocus:true}">
-                <button @click="fun">确认</button>
+            <div class="div_style_3" :style="height1">
+                <input style="border:none;outline:medium;" placeholder="手机号码" v-model="photo" :attr="{autofocus:true}">
+                <div :style="eject" class="eject_style_1">
+                    <input type="text" v-model="message" style="border:none;outline:medium;" placeholder="请输入验证码">
+                    <button style="outline:medium;" @click="ajax">{{text}}</button>
+                </div>
             </div>
-            <div class="div_style_4">
+            <div class="div_style_4" :style="height2">
+                <button style="outline:medium;" class="button_style_1" @click="fun">确认</button>
                 <router-link to="/Login">用户名密码登录</router-link>
             </div>
             <div class="div_style_5">
@@ -42,14 +46,41 @@
 export default {
     data(){
         return{
-           uname:"",
-           upwd:"",
+           photo:"",
+           message:"",
+           eject:"display:none", 
+           height1:"height:40px",
+           height2:"height:250px",
+           text:"获取验证码"
         }
     },
     methods: {
         //axios请求 
         fun(){
-            console.log(111)
+            var eject=this.eject;
+            var height1=this.height1;
+            var height2=this.height2;
+            eject="display:block"
+            height1="hieght:40px"
+            height2="height:220px"
+            this.height1=height1;
+            this.height2=height2;
+            this.eject=eject;   
+        },
+        ajax(){
+            var text=this.text 
+            var n=60; 
+            var times=setInterval(()=>{
+                n--;
+                if(n==-1){
+                   clearInterval(times)
+                   this.text="获取验证码";
+                }else{
+                    text=n+"s";
+                    this.text=text;
+                }
+            },1000)
+            
         }
         //     var uname=this.uname
         //     var upwd=this.upwd
@@ -128,7 +159,6 @@ export default {
       /* 登录框 */
       .div_style_3{
           width:355px;
-          height:120px;
           color: #999;
           position: relative;
       }
@@ -141,7 +171,7 @@ export default {
           border-bottom:1px solid #999 ;
           margin-bottom: 5px;
       }
-      .div_style_3 button{
+      .button_style_1{
           display: block;
           width: 355px;
           height:40px;
@@ -152,12 +182,32 @@ export default {
           border-radius: 5px;
           margin-top: 20px;
       }
+      .eject_style_1{
+          width: 22.1875rem;
+          height: 2.5rem;
+          input{
+              display: inline-block !important;
+              width: 15.9375rem !important;
+              height: 2.5rem !important;
+              border-bottom:1px solid #999 !important;
+          }
+          button{
+              display: inline-block;
+              width: 5.3rem;
+              height: 2.5rem;
+              border:none;
+              background-color: rgb(236, 148, 148);
+              font-size: .9375rem;
+              border-radius: .3125rem;
+              color: #fff;
+          }
+      }
       /* 转到用户名密码登录页 */
       .div_style_4{
           width: 355px;
-          height: 250px;
+         
       }
-      .div_style_4 a:first-child{
+      .div_style_4 a{
           display: flex;
           float: left;
           color: rgb(236, 148, 148);

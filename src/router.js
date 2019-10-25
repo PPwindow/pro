@@ -16,11 +16,16 @@ import Home from './views/Home.vue'
 import SignIn from './views/SignIn.vue'
 //主页
 import Index from './components/zy/index.vue'
+import Publishpictures from './components/Publishpictures.vue'
 Vue.use(Router)
 
 export default new Router({
   routes: [
+<<<<<<< HEAD
     {path:'/caipu',component:caipu},
+=======
+    {path:'/Publishpictures',component:Publishpictures},
+>>>>>>> ff5e5590ee4662653191aa5d69e35e90cb0da776
     {path:'/Index',component:Index},
     {path:'/SignIn',component:SignIn},
     {path:'/Home',component:Home},

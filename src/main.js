@@ -9,12 +9,16 @@ axios.defaults.withCredentials=true
 Vue.prototype.axios = axios
 //引入mint-ui
 import MintUI from "mint-ui"
+//引入vuex
+import Vuex from "vuex"
 //单引入mint-ui库中样式文件
 import "mint-ui/lib/style.css"
 //将mint-ui注册vue实例
 Vue.use(MintUI)
-
 Vue.config.productionTip = false
+//注册vuex实例
+Vue.use(Vuex)
+
 
 new Vue({
   router,

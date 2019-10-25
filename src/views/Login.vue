@@ -15,7 +15,7 @@
                 <a href="javascript:;" @click="change">
                     <img :src="imgs[i]" alt="">
                 </a>
-                <button @click="fun">登录</button>
+                <button @click="fun" style="outline:medium;">登录</button>
             </div>
             <div class="div_style_4">
                 <router-link to="/Sign">手机验证码登录</router-link>
@@ -52,7 +52,6 @@ export default {
                require("../assets/pic/password_show_icon.png"),
            ],
            i:0,
-           code:""
         }
     },
     props:[],
@@ -70,9 +69,8 @@ export default {
                     if(res.data.code<0){
                         this.$messagebox("消息","用户名密码有误")
                     }else{
-                        this.code=res.data.code
-                        console.log(this.code);
-                        this.$emit("pass",this.code)
+                        this.$store.code=res.data.code
+                        this.$emit("pass",this.$store.code)
                     }
                 })
         },
@@ -90,7 +88,12 @@ export default {
     },
     watch:{
         
-    }
+    },
+    computed: {
+        num(){
+            return this.$store.code
+        }
+    },
 }
 </script>
 <style lang="scss" scoped>
