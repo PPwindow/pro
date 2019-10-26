@@ -171,7 +171,7 @@ export default {
 /*修改默认tab选中文字样式*/
 .mint-tabbar>.mint-tab-item.is-selected{
   background-color: transparent;
-  color:#45c018;
+  color:#ff6766;
 }
 
 .page-wrap{

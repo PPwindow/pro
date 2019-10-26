@@ -72,7 +72,8 @@ export default {
 <style scoped>
 #container{
         width: 404px;
-        margin-left: 10px;
+        margin-left: 5px;
+        margin-top:5px;
     }
     #container .viewport{
         width: 404px;
@@ -85,7 +86,7 @@ export default {
         height: 150px;
         position:absolute;
         left:0; /*660px*/
-        background-color: greenyellow;
+        /* background-color: greenyellow; */
     }
     #container .viewport .top_img_container>div{
         width: 124px;
@@ -93,9 +94,10 @@ export default {
         float:left;
     }
     #container .viewport .top_img_container>div>img{
-        width: 128px;
-        height: 128px;
-        border-radius:10px;
+        width: 118px;
+        height: 118px;
+        border-radius:15px;
+        border:5px solid transparent;
     }
     #container .viewport .top_img_container>div{
         font-size:15px;

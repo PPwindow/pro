@@ -63,7 +63,11 @@ export default {
 <style scoped>
     .mint-cell{
         margin-left: 10px;
-        margin-right:20px;
-        /* border-bottom: 1px solid #eee; */
+        margin-right:10px;
+        border-bottom: 1px solid #eee;
+    }
+    .mint-cell-wrapper{
+        background: none;
+        padding-right: 0;
     }
 </style>

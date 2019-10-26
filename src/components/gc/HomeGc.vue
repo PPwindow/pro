@@ -88,7 +88,7 @@ export default {
     }
     .mint-tab-container-item{
         /* margin: 0 auto; */
-        margin-top: 42px;
+        margin-top: 50px;
         /* margin-left: 20px; */
         /* margin-right: 20px; */
         box-sizing: border-box;
